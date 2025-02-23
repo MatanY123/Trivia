@@ -66,6 +66,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void createDialog() {
+
+        CustomDialog customDialog = new CustomDialog(this);
+        customDialog.show();
     }
 
     @Override
@@ -75,6 +78,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             if (q.getCorrect()==1)
                 points++;
         }
+
         if (v==btna2)
         {
             if (q.getCorrect()==2)
@@ -94,5 +98,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             tvQuestionNumber.setText("Question number: " +(collection.getIndex()+1 ));
         }
         nextQuestion();
+    }
+
+    public void reset() {
+        this.points=0;
+        collection.initQuestions();
+        tvPoints.setText("points: " + 0);
+        tvQuestionNumber.setText("Question number: " + 1);
+        tvGameOver.setVisibility(View.INVISIBLE);
+        this.nextQuestion();
     }
 }
