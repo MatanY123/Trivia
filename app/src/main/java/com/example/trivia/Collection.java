@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Collection {
 
+
     private ArrayList<Question> arr;
     private int index; //מספר השאלה הבאה בתור|
 
