@@ -23,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> resultLauncher;
     private FBModule fbModule;
+
     private ConstraintLayout ll;
+    private String backgroundColor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +50,15 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+
             }
         });
     }
     public void onClickStart(View view) {
 
         Intent intent = new Intent(this,GameActivity.class);
+        intent.putExtra("background_color", backgroundColor);
+
         startActivity(intent);
     }
     public void onClickSetting(View view) {
@@ -62,10 +68,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickInstruction(View view) {
+        Intent i = new Intent(this, InstructionActivity.class);
+        resultLauncher.launch(i);
     }
 
     public void setNewColorFromFb(String str) {
         //הפיירבייס קורא לפעולה בפעם הראשונה ואחרי כל פעם שהמשתמש משנה את הצבע
+        backgroundColor = str;
         Toast.makeText(MainActivity.this,str,Toast.LENGTH_SHORT).show();
         setBackgroundColor(str);
 
@@ -90,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
               break;
           }
           case "Pink":
+
           {
               ll.setBackgroundColor(Color.argb(100,100,100,100));
               break;

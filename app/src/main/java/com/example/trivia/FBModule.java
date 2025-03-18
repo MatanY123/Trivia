@@ -25,6 +25,8 @@ public class FBModule {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         String str= snapshot.getValue(String.class);
                         ((MainActivity)context).setNewColorFromFb(str);
+
+
                     }
 
                     @Override
