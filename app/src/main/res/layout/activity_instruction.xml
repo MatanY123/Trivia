@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_shadow_start_color"
+    tools:context=".InstructionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. עלייך לבחור תשובה אחת בלבד"
+        android:textSize="30dp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. כדי לבחור צבע רקע למשחק עלייך להיכנס להגדרות ולבחור באחת מהאפשרויות"
+        android:textSize="30dp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. על כל תשובה נכונה תקבל נקודה אחת "
+        android:textSize="30dp"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. המשחק יספור בשבילך את כמות השאלות שצדקת בהן"
+        android:textSize="30dp"></TextView>
+
+</LinearLayout>
